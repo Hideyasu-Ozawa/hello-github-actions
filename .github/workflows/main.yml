@@ -1,6 +1,5 @@
 name: hello
 on: push
-
 jobs:
   hello:
     name: hello
