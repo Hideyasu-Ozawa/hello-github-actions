@@ -4,8 +4,8 @@ jobs:
   hello:
     name: hello
     runs-on: ubuntu-latest
-    env:
-      PATH: ${ GITHUB_WORKSPACE }/aa
+
     steps:
       - name: Hello
-        run: echo $PATH
+        run: echo "hi"
+          echo "hello"
