@@ -7,5 +7,6 @@ jobs:
 
     steps:
       - name: Hello
-        run: echo "hi"
+        run: |
+          echo "hi"
           echo "hello"
