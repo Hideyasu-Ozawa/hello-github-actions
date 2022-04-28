@@ -3,10 +3,16 @@ on: push
 jobs:
   hello:
     name: hello
-    runs-on: ubuntu-latest
+#     runs-on: ubuntu-latest
+    runs-on: windows-2019
 
     steps:
       - name: Hello
         run: |
+          pwd
+          ls -la
+          cd ~
+          pwd
+          ls -la
           echo "hi"
           echo "hello"
