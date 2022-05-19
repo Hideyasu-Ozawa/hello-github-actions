@@ -3,6 +3,9 @@ on: push
 jobs:
   hello:
     name: hello
+    defaults:
+      run:
+        working-directory: "~/repo"
     runs-on: ubuntu-latest
     container:
       image: openjdk:8-jdk
@@ -10,5 +13,8 @@ jobs:
     steps:
       - name: Hello
         run: |
+
           echo "hello"
+          pwd
+          ls -la
           java -version
