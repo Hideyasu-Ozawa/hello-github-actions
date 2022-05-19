@@ -22,4 +22,4 @@ jobs:
           java-version: 8
 
       - name: java version
-        run: java --version
+        run: java -version
