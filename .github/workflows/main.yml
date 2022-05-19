@@ -3,19 +3,18 @@ on: push
 jobs:
   hello:
     name: hello
-#     runs-on: ubuntu-latest
-    runs-on: windows-2019
-    defaults:
-      run:
-        shell: bash
+    runs-on: ubuntu-latest
+    container:
+      image: openjdk:8-jdk
 
     steps:
-      - name: Hello
-        run: |
-          pwd
-          ls -la
-          cd ~
-          pwd
-          ls -la
-          echo "hi"
-          echo "hello"
+    - name: Set up JDK 8
+      uses: actions/setup-java@v2
+      with:
+        distribution: 'adopt'
+        java-version: 8
+
+    - name: Hello
+      run: |
+        echo "hello"
+        java -version
